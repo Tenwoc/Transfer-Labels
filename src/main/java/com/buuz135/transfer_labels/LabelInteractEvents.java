@@ -32,7 +32,7 @@ public class LabelInteractEvents {
     public void onTick(LevelTickEvent.Pre event) {
         if (event.getLevel() instanceof ServerLevel serverLevel) {
             for (LabelBlock value : LabelStorage.getStorageFor(serverLevel).getLabelBlocksMap().values()) {
-                if (serverLevel.isLoaded(value.getPos())) {
+                if (serverLevel.shouldTickBlocksAt(value.getPos()) && serverLevel.isLoaded(value.getPos())) {
                     value.getLabels().forEach((direction, label) -> label.work(serverLevel));
                 }
             }

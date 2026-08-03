@@ -1,3 +1,7 @@
+# 0.1.9
+
+* Added `shouldTickBlocksAt` on the tick label method, closes #10
+
 # 0.1.8
 
 * Added config values, closes #6
