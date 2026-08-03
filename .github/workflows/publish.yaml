@@ -24,7 +24,7 @@ jobs:
       - name: build
         run: ./gradlew build
       - name: Publish Minecraft Mods Forge
-        uses: Kir-Antipov/mc-publish@v3.3.0
+        uses: Kir-Antipov/mc-publish@v3.3.1
         with:
           curseforge-id: 1184406
           modrinth-id: hRrzpz5p
@@ -39,6 +39,7 @@ jobs:
             1.21.1
           java: 21
           name: ""
+          environment: client | server
           changelog: "https://github.com/Buuz135/Transfer-Labels/blob/master/CHANGELOG.md"
           dependencies: |
             titanium | depends
